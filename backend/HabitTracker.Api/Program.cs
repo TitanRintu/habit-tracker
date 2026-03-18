@@ -51,11 +51,11 @@ builder.Services.AddCors(opt =>
 
 var app = builder.Build();
 
-// Auto-create tables (drops and recreates if schema changed)
+// Run migrations on startup (safe for new and existing databases)
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    db.Database.EnsureCreated();
+    db.Database.Migrate();
 }
 
 app.UseCors();
