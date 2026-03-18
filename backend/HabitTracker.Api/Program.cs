@@ -11,7 +11,7 @@ var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
 builder.WebHost.UseUrls($"http://+:{port}");
 
 builder.Services.AddDbContext<AppDbContext>(opt =>
-    opt.UseSqlite(builder.Configuration.GetConnectionString("Default") ?? "Data Source=habits.db"));
+    opt.UseSqlite(builder.Configuration.GetConnectionString("Default") ?? "Data Source=habits_v2.db"));
 
 builder.Services.AddIdentityCore<ApplicationUser>(opt =>
 {
