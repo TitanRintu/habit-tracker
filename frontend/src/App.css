@@ -89,6 +89,15 @@
 
 .nav-icon-btn:hover { background: #eeeef8; }
 
+.nav-user-email {
+  font-size: 11px;
+  color: #9999bb;
+  max-width: 130px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .nav-avatar {
   width: 34px;
   height: 34px;
@@ -102,7 +111,10 @@
   justify-content: center;
   cursor: pointer;
   border: none;
+  flex-shrink: 0;
+  transition: opacity 0.15s;
 }
+.nav-avatar:hover { opacity: 0.85; }
 
 /* ── Page content ───────────────────────── */
 .app-content {

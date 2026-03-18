@@ -7,6 +7,7 @@ public class Habit
     public string Emoji { get; set; } = "✅";
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public bool IsArchived { get; set; } = false;
+    public string UserId { get; set; } = string.Empty;
 
     public ICollection<HabitLog> Logs { get; set; } = [];
 }
